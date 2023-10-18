@@ -8,15 +8,6 @@ terraform {
       version = "~> 4.0"
     }
   }
-
-  backend "s3" {
-    bucket = "mjsydney23-terraform-state"
-    key    = "modules/services/webserver-cluster/terraform.tfstate"
-    region = "ap-southeast-2"
-
-    dynamodb_table = "mjsydney23-terraform-locks"
-    encrypt        = true
-  }
 }
 
 locals {
